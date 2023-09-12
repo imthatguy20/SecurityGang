@@ -1,6 +1,7 @@
 import time
 import sys
 import pyfiglet
+from ADFunc import ADlookup
 
 def exit_tool():
     sys.exit()
@@ -25,7 +26,7 @@ def menu():
     try:
         i = input("Select available option: ")
         if i == '0':
-            print("Nonethin yet")
+            ADlookup()
         if i == '1':
             print("Nonethin yet")
         if i == '2':
@@ -41,10 +42,11 @@ def menu():
         if i == '7':
             exit_tool()
         else:
-            time.sleep()
+            time.sleep(0.5)
             menu()
     except:
         exit_tool()
+
 if __name__ == '__main__':
     PrintBanner()
     menu()
